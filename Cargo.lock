@@ -40,6 +40,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "ckb-gen-types"
+version = "0.111.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a3bc54ca99b09e1eb5fc6c49bb1156644ce57fce9c6f52b5c13110b9a3143f7e"
+dependencies = [
+ "cfg-if",
+ "molecule",
+]
+
+[[package]]
 name = "ckb-hash"
 version = "0.112.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -69,6 +79,17 @@ dependencies = [
  "buddy-alloc",
  "cc",
  "ckb-standalone-types",
+]
+
+[[package]]
+name = "ckb-transaction-cobuild"
+version = "0.1.0"
+source = "git+https://github.com/cryptape/ckb-transaction-cobuild-poc?rev=bdb0c74#bdb0c745a76c1aa349a0e881ad4ccdd4af286723"
+dependencies = [
+ "blake2b-ref",
+ "ckb-gen-types",
+ "ckb-std",
+ "molecule",
 ]
 
 [[package]]
@@ -142,8 +163,10 @@ version = "0.1.0"
 dependencies = [
  "ckb-hash",
  "ckb-std",
+ "ckb-transaction-cobuild",
  "hex",
  "kmp",
+ "molecule",
  "spore-errors",
  "spore-types",
  "spore-utils",
