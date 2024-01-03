@@ -706,7 +706,7 @@ fn test_destroy() {
 
     context
         .verify_tx(&tx, MAX_CYCLES)
-        .expect("try destroy immortal");
+        .expect("try destroy normal spore");
 }
 
 #[test]
@@ -732,12 +732,12 @@ fn test_destroy_immortal() {
         vec![spore_script_dep],
         vec![packed::Bytes::default()],
     );
-
     let tx = context.complete_tx(tx);
 
-    context
+    let err = context
         .verify_tx(&tx, MAX_CYCLES)
         .expect_err("try destroy immortal");
+    assert_script_error(err, spore_errors::error::Error::DestroyImmortalNFT as i8);
 }
 
 #[test]
