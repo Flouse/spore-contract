@@ -112,6 +112,7 @@ dependencies = [
  "ckb-std",
  "spore-build-tools",
  "spore-errors",
+ "spore-types",
  "spore-utils",
 ]
 
@@ -124,6 +125,7 @@ dependencies = [
  "hex",
  "spore-build-tools",
  "spore-errors",
+ "spore-types",
  "spore-utils",
 ]
 
