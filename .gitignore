@@ -6,7 +6,8 @@ target
 contracts/c/build/*
 
 # others
-build/*
+build/debug
+build/release
 !.gitkeep
 .tmp/
 
