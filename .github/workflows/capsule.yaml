@@ -1,5 +1,6 @@
 name: Capsule build/test
 on:
+  push:
   pull_request:
     paths:
       - contracts/**
