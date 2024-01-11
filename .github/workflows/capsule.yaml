@@ -33,5 +33,10 @@ jobs:
       - name: Capsule test -- --nocapture
         run: capsule test
 
-      
-        
+      - name: Release version testing
+        run: |
+          capsule build --release
+          capsule test --release
+
+      - name: Record the size of contracts
+        run: ls -lh ./build/debug ./build/release
