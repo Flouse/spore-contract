@@ -1,6 +1,6 @@
 [package]
 name = "code_hash"
-description = "record the contract binaries' code_hashes"
+description = "record code_hash of contract binaries"
 version = "0.1.0"
 edition = "2021"
 
